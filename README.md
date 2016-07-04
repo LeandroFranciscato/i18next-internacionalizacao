@@ -1,8 +1,9 @@
 ## i18next para internacionalização
 
-> [Demo](http://thulioph.github.io/i18next-internacionalizacao)
+> [Demo](http://LeandroFranciscato.github.io/i18next-internacionalizacao)
 
-Este repositório contém todo o código utilizado no exemplo do post sobre [i18next para internacionalização](http://blog.thulioph.com/javascript/internacionalizacao.html "Link para o post"). 
+Este repositório contém um exemplo para utilização da API i18next.
+Este repositório é um FORK do original, disponível <a href="https://github.com/thulioph/i18next-internacionalizacao"> Aqui</a>.
 
 ## Licença
 
