@@ -4,19 +4,14 @@
         <meta charset="UTF-8">
         <title>Exemplo do uso para o i18next</title>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js" ></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/2.0.22/i18next.min.js" ></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-i18next/0.0.14/i18next-jquery.min.js" ></script>
-        <script src="i18nextBrowserLanguageDetector.min.js" type="text/javascript"></script>
-        <script src="i18nextXHRBackend.min.js" type="text/javascript"></script>
+        <script src="js/jquery/jquery.2.2.0.js" type="text/javascript"></script>        
+        <script src="js/i18next/i18next.2.0.22.min.js" type="text/javascript"></script>        
+        <script src="js/i18next/i18next-jquery.0.0.14.min.js" type="text/javascript"></script>
+        <script src="js/i18next/i18nextBrowserLanguageDetector.min.js" type="text/javascript"></script>
+        <script src="js/i18next/i18nextXHRBackend.min.js" type="text/javascript"></script>
 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <style>
-            html { text-align: center; }
-            p { text-align: left; }
-            .btn { margin-top: 20px; }
-            .btn:active, .btn:focus { border: none; outline: none;}
-        </style>
+        <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/index.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
 
@@ -45,51 +40,8 @@
 
                     <a href="http://pt.wikipedia.org/wiki/Hist%C3%B3ria_do_Brasil" title="" data-i18n="link.referencia;[title]link.title"></a>
                 </div>
-            </div>
-
-            <script>
-                // Iniciando a lib
-                i18next.use(i18nextBrowserLanguageDetector)
-                        .use(i18nextXHRBackend)
-                        .init({
-                            fallbackLng: "en" //fallback quando não definir linguagem
-                            , debug: true //debug do plugin
-                            , fixLng: true //preserva o cookie quando a linguagem for definida
-                            , load: 'current' //define a forma correta de declarar linguagens
-                            , backend: {
-                                "loadPath": "locales/{{lng}}/{{ns}}.json"
-                            }
-                        },
-                                function (translation) {
-                                    i18nextJquery.init(i18next, $);
-                                    $('[data-i18n]').localize();
-                                });
-
-                // espanhol
-                $('#btn-es').on('click', function () {
-                    i18next.changeLanguage("es", function (err, t) {
-                        i18nextJquery.init(i18next, $);
-                        $('[data-i18n]').localize();
-                    });
-                });
-
-                // inglês
-                $('#btn-en').on('click', function () {
-                    i18next.changeLanguage("en", function (err, t) {
-                        i18nextJquery.init(i18next, $);
-                        $('[data-i18n]').localize();
-                    });
-                });
-
-                // português
-                $('#btn-pt').on('click', function () {
-                    i18next.changeLanguage("pt", function (err, t) {
-                        i18nextJquery.init(i18next, $);
-                        $('[data-i18n]').localize();
-                    });
-                });
-
-            </script>
+            </div>           
+            <script src="js/i18next.ini.js" type="text/javascript"></script>
         </div>
     </body>
 </html>

@@ -1,0 +1,4 @@
+html { text-align: center; }
+p { text-align: left; }
+.btn { margin-top: 20px; }
+.btn:active, .btn:focus { border: none; outline: none;}
